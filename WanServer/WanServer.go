@@ -111,7 +111,7 @@ func (srv *Server) privateAcceptProcess(connCh <-chan net.Conn) {
 	}
 }
 
-func (srv *Server) process() {
+func (srv *Server) Process() {
 	var err error
 	srv.publicListener, err = net.Listen("tcp", srv.localOutAddr)
 	if err != nil {
@@ -140,5 +140,5 @@ func (srv *Server) process() {
 }
 
 func (srv *Server) Run() {
-	go srv.process()
+	go srv.Process()
 }

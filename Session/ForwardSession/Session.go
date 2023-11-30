@@ -24,6 +24,7 @@ func (fs *Session) process() {
 
 	wg.Wait()
 	close(ch)
+	log.Println("[forard] session close ", fs.firstConnection.RemoteAddr().String(), fs.secondConnection.RemoteAddr().String())
 }
 
 func (fs *Session) Start() {
