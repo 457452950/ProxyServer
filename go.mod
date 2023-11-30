@@ -1,3 +1,3 @@
-module MyProxy
+module ProxyServer
 
 go 1.19
